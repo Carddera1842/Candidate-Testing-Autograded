@@ -61,10 +61,10 @@ function runProgram() {
   // TODO 1.1c: Greet candidate using their name //
    console.log(`Welcome, ${candidateName}!`);
   askQuestion();
-  gradeQuiz(candidateAnswers);
+  gradeQuiz(this.candidateAnswers);
 }
 
-runProgram()
+
 // ----------- Don't write any code or change any code below this line ---------- //
 module.exports = {
   candidateName: candidateName,
