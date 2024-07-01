@@ -50,7 +50,7 @@ function gradeQuiz(candidateAnswers) {
   console.log(`>>> Overall Grade: ${grade}% (${rightAnswers} of ${questions.length} responses correct}) <<<`)
 
   if (grade < 80){
-    console.log('>>>Status: FAILED <<<')
+    console.log('>>> Status: FAILED <<<')
   } else {
     console.log('>>> Status: PASSED <<<')
   }
@@ -64,6 +64,7 @@ function runProgram() {
   askQuestion();
   gradeQuiz(candidateAnswers);
 }
+
 
 
 // ----------- Don't write any code or change any code below this line ---------- //
