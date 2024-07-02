@@ -26,8 +26,8 @@ function askForName() {
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
   for (let i = 0; i < questions.length; i++){
-  candidateAnswer = input.question(questions[i])
-  candidateAnswers.push(candidateAnswer)
+    candidateAnswer = input.question(questions[i])
+    candidateAnswers.push(candidateAnswer)
   }
 }
   
@@ -40,17 +40,17 @@ function gradeQuiz(candidateAnswers) {
 
   for (let i = 0; i < questions.length; i++) {
     console.log(`${i + 1}) ${questions[i]} \nYour Answer: ${candidateAnswers[i]}. \nCorrect Answer: ${correctAnswers[i]}\n`)
-    if (candidateAnswers[i].toLowerCase() !== correctAnswers[i].toLowerCase()) {
-    } else {
+    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
       rightAnswers++
     }
-}
+  }
+
   let grade = (rightAnswers / questions.length) * 100;  //TODO 3.2 use this variable to calculate the candidates score.
   
   console.log(`>>> Overall Grade: ${grade}% (${rightAnswers} of ${questions.length} responses correct}) <<<`)
 
-  if (grade < 80){
-    console.log('>>> Status: FAILED <<<')
+if (grade < 80){
+  console.log('>>> Status: FAILED <<<')
   } else {
     console.log('>>> Status: PASSED <<<')
   }
